@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <rect width="600" height="400" fill="#151928"/>
+  <rect x="1" y="1" width="598" height="398" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="2" stroke-dasharray="8 8"/>
+  <text x="300" y="190" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#9aa3b2">Image placeholder</text>
+  <text x="300" y="220" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#5f6b7e">Replace with your photo</text>
+</svg>
