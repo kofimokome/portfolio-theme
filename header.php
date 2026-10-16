@@ -24,8 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <header class="km-header">
 	<div class="km-header__inner">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="km-logo" aria-label="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
-			<img src="<?php echo esc_url( KOFIMOKOME_URI . '/assets/img/kofimokome-logo.png' ); ?>" alt="" class="km-logo__img" aria-hidden="true">
-			<span><?php echo esc_html( get_bloginfo( 'name' ) ); ?></span>
+			<img src="<?php echo esc_url( KOFIMOKOME_URI . '/assets/img/kofimokome-logo.png' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="km-logo__img">
 		</a>
 
 		<nav class="km-nav" id="km-nav" aria-label="<?php esc_attr_e( 'Primary', 'kofimokome' ); ?>">

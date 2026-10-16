@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 	if ( ! defined( 'KOFIMOKOME_VERSION' ) ) {
-		define( 'KOFIMOKOME_VERSION', '1.6.0' );
+		define( 'KOFIMOKOME_VERSION', '1.6.1' );
 	}
 
 if ( ! defined( 'KOFIMOKOME_URI' ) ) {
