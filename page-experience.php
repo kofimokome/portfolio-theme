@@ -11,59 +11,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$experience = array(
+$experience_query = new WP_Query(
 	array(
-		'role'     => 'Backend Developer',
-		'company'  => 'Errandia',
-		'location' => 'Buea, Cameroon',
-		'dates'    => 'Apr 2025 – Present',
-		'items'    => array(
-			'Developed and maintained RESTful APIs using Laravel/PHP and MySQL, plus JavaScript-based interfaces and mobile applications.',
-			'Automated CI/CD deployment using Docker and GitHub Actions, cutting deployment time by more than 50%.',
-			'Introduced automated testing to improve code quality and reduce production bugs.',
-			'Led the development and release of two SaaS products within six months.',
-			'Incorporated AI-powered functionality to automate basic customer-support requests.',
-			'Used AI-assisted coding tools to accelerate software delivery.',
-		),
-	),
-	array(
-		'role'     => 'Backend Developer (Part Time)',
-		'company'  => 'WhileSmart Ltd.',
-		'location' => 'Buea, Cameroon',
-		'dates'    => 'Nov 2024 – Present',
-		'items'    => array(
-			'Co-developed SourceAnt, an AI-assisted code-review solution.',
-			'Develop and maintain Laravel packages and robust APIs for open-source and proprietary projects.',
-			'Supervise and mentor interns in software development and open-source engineering.',
-			'Translate business requirements into Software Requirements Specifications and technical solutions.',
-		),
-	),
-	array(
-		'role'     => 'University Teaching Assistant',
-		'company'  => 'University of Buea',
-		'location' => 'Buea, Cameroon',
-		'dates'    => 'Dec 2022 – Sep 2026',
-		'items'    => array(
-			'Instruct level 200 students in Web Design, covering frontend and backend concepts.',
-			'Led the development of UB Logbook, a digital application for tracking lecturer attendance.',
-			'Generated academic timetables and supported administrative operations for the HND program.',
-			'Contributed to the development of the new national HND syllabus.',
-		),
-	),
-	array(
-		'role'     => 'Web Developer',
-		'company'  => 'Zinger Systems Ltd',
-		'location' => 'Buea, Cameroon',
-		'dates'    => 'Nov 2021 – Nov 2025',
-		'items'    => array(
-			'Led development of the Zangi mobile application, reducing delivery timeline from ~6 months to 3 months.',
-			'Collaborated with UI/UX designers to translate complex Figma designs into responsive websites.',
-			'Built dynamic web applications utilizing PHP, JavaScript, and Docker.',
-			'Architected custom WordPress solutions, including bespoke themes and plugins.',
-			'Designed and integrated secure REST APIs.',
-		),
-	),
+		'post_type'      => 'experience',
+		'posts_per_page' => -1,
+		'orderby'        => 'menu_order',
+		'order'          => 'DESC',
+	)
 );
+
+$role_count = wp_count_posts( 'experience' )->publish;
 ?>
 
 <main class="km-content km-page">
@@ -77,7 +34,7 @@ $experience = array(
 
 			<div class="km-page-hero__stats">
 				<div class="km-stat">
-					<div class="km-stat__value">4</div>
+					<div class="km-stat__value"><?php echo esc_html( $role_count ); ?></div>
 					<div class="km-stat__label">Roles</div>
 				</div>
 				<div class="km-stat">
@@ -98,25 +55,39 @@ $experience = array(
 
 	<section class="km-page-section">
 		<div class="km-container">
-			<div class="km-timeline">
-				<?php foreach ( $experience as $i => $job ) : ?>
-					<article class="km-timeline__item km-reveal">
-						<div class="km-timeline__dot" aria-hidden="true"></div>
-						<div class="km-timeline__header">
-							<div>
-								<h2 class="km-timeline__title"><?php echo esc_html( $job['role'] ); ?></h2>
-								<div class="km-timeline__company"><?php echo esc_html( $job['company'] ); ?> · <?php echo esc_html( $job['location'] ); ?></div>
+			<?php if ( $experience_query->have_posts() ) : ?>
+				<div class="km-timeline">
+					<?php
+					while ( $experience_query->have_posts() ) :
+						$experience_query->the_post();
+						$company  = kofimokome_get_experience_company();
+						$location = kofimokome_get_experience_location();
+						$dates    = kofimokome_get_experience_dates();
+						$items    = kofimokome_get_experience_items();
+						?>
+						<article class="km-timeline__item km-reveal">
+							<div class="km-timeline__dot" aria-hidden="true"></div>
+							<div class="km-timeline__header">
+								<div>
+									<h2 class="km-timeline__title"><?php the_title(); ?></h2>
+									<div class="km-timeline__company"><?php echo esc_html( $company ); ?> · <?php echo esc_html( $location ); ?></div>
+								</div>
+								<span class="km-timeline__dates"><?php echo esc_html( $dates ); ?></span>
 							</div>
-							<span class="km-timeline__dates"><?php echo esc_html( $job['dates'] ); ?></span>
-						</div>
-						<ul class="km-timeline__list">
-							<?php foreach ( $job['items'] as $item ) : ?>
-								<li><?php echo esc_html( $item ); ?></li>
-							<?php endforeach; ?>
-						</ul>
-					</article>
-				<?php endforeach; ?>
-			</div>
+							<?php if ( $items ) : ?>
+								<ul class="km-timeline__list">
+									<?php foreach ( $items as $item ) : ?>
+										<li><?php echo esc_html( $item ); ?></li>
+									<?php endforeach; ?>
+								</ul>
+							<?php endif; ?>
+						</article>
+					<?php endwhile; ?>
+				</div>
+			<?php else : ?>
+				<p><?php esc_html_e( 'No experience entries yet.', 'kofimokome' ); ?></p>
+			<?php endif; ?>
+			<?php wp_reset_postdata(); ?>
 		</div>
 	</section>
 </main>

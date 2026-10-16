@@ -223,7 +223,7 @@ button {
 }
 
 .km-btn--primary:hover {
-	background: #ffd54f;
+	background: #ffffff;
 	color: var(--km-bg);
 }
 
@@ -250,8 +250,9 @@ button {
 }
 
 .km-btn--outline:hover {
-	border-color: rgba(255, 255, 255, 0.25);
-	color: var(--km-text);
+	background: #ffffff;
+	border-color: #ffffff;
+	color: var(--km-bg);
 }
 
 /* --------------------------------------------------------------------------
@@ -398,6 +399,13 @@ button {
 	justify-content: center;
 }
 
+.km-hero__socials {
+	display: flex;
+	gap: 0.75rem;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
 .km-hero__socials a {
 	width: 58px;
 	height: 58px;
@@ -411,8 +419,8 @@ button {
 }
 
 .km-hero__socials a:hover {
-	background: var(--km-accent);
-	border-color: var(--km-accent);
+	background: #ffffff;
+	border-color: #ffffff;
 	color: var(--km-bg);
 	transform: translateY(-4px);
 }
@@ -465,10 +473,15 @@ button {
 	animation: km-float 5s ease-in-out infinite;
 }
 
-.km-float-badge svg {
+.km-float-badge svg,
+.km-float-badge i {
 	width: 16px;
 	height: 16px;
 	color: var(--km-accent);
+	font-size: 14px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 }
 
 @media (max-width: 1024px) {
@@ -1119,6 +1132,77 @@ button {
 	color: var(--km-accent);
 }
 
+.km-contact__form .wpcf7-form label {
+	display: block;
+	margin-bottom: 1rem;
+	font-size: 0.9rem;
+	color: var(--km-text-muted);
+}
+
+.km-contact__form .wpcf7-form input[type="text"],
+.km-contact__form .wpcf7-form input[type="email"],
+.km-contact__form .wpcf7-form textarea {
+	width: 100%;
+	margin-top: 0.35rem;
+	padding: 0.75rem 1rem;
+	background: var(--km-surface-2);
+	border: 1px solid var(--km-border);
+	border-radius: var(--km-radius);
+	color: var(--km-text);
+	font-family: inherit;
+	font-size: 0.95rem;
+	transition: border-color var(--km-transition), box-shadow var(--km-transition);
+}
+
+.km-contact__form .wpcf7-form input[type="text"]:focus,
+.km-contact__form .wpcf7-form input[type="email"]:focus,
+.km-contact__form .wpcf7-form textarea:focus {
+	outline: none;
+	border-color: var(--km-accent);
+	box-shadow: 0 0 0 3px rgba(45, 127, 249, 0.15);
+}
+
+.km-contact__form .wpcf7-form textarea {
+	min-height: 120px;
+	resize: vertical;
+}
+
+.km-contact__form .wpcf7-form input[type="submit"] {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	padding: 0.85rem 1.5rem;
+	border-radius: 999px;
+	font-weight: 600;
+	font-size: 0.95rem;
+	border: 1px solid transparent;
+	cursor: pointer;
+	background: var(--km-accent);
+	color: var(--km-bg);
+	transition: transform var(--km-transition), background var(--km-transition), border-color var(--km-transition), color var(--km-transition);
+}
+
+.km-contact__form .wpcf7-form input[type="submit"]:hover {
+	background: #ffffff;
+	color: var(--km-bg);
+	transform: translateY(-2px);
+}
+
+.km-contact__form .wpcf7-not-valid-tip {
+	color: #ff6b6b;
+	font-size: 0.85rem;
+}
+
+.km-contact__form .wpcf7-response-output {
+	margin: 1rem 0 0;
+	padding: 0.75rem 1rem;
+	border-radius: var(--km-radius);
+	border: 1px solid var(--km-border);
+	background: var(--km-surface-2);
+	color: var(--km-text);
+}
+
 @media (max-width: 768px) {
 	.km-contact__grid {
 		grid-template-columns: 1fr;
@@ -1147,8 +1231,8 @@ button {
 }
 
 .km-socials a:hover {
-	background: var(--km-accent);
-	border-color: var(--km-accent);
+	background: #ffffff;
+	border-color: #ffffff;
 	color: var(--km-bg);
 	transform: translateY(-4px);
 }

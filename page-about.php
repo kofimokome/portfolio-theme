@@ -103,6 +103,58 @@ get_header();
 			</div>
 		</div>
 	</section>
+
+	<section class="km-page-section">
+		<div class="km-container km-reveal">
+			<div class="km-page-section__header">
+				<span class="km-section__eyebrow">Education</span>
+				<h2 class="km-page-section__title">Academic background</h2>
+			</div>
+			<?php
+			$education_query = new WP_Query(
+				array(
+					'post_type'      => 'education',
+					'posts_per_page' => -1,
+					'orderby'        => 'menu_order',
+					'order'          => 'DESC',
+				)
+			);
+			if ( $education_query->have_posts() ) :
+				?>
+				<div class="km-edu-grid">
+					<?php
+					while ( $education_query->have_posts() ) :
+						$education_query->the_post();
+						$abbr   = kofimokome_get_education_abbr();
+						$school = kofimokome_get_education_school();
+						$dates  = kofimokome_get_education_dates();
+						$thesis = kofimokome_get_education_thesis();
+						$tags   = kofimokome_get_education_tags();
+						?>
+						<article class="km-edu-card km-reveal">
+							<div class="km-edu-card__top">
+								<span class="km-edu-card__label"><?php the_title(); ?></span>
+								<span class="km-edu-card__dates"><?php echo esc_html( $dates ); ?></span>
+							</div>
+							<div class="km-edu-card__abbr"><?php echo esc_html( $abbr ); ?></div>
+							<div class="km-edu-card__school"><?php echo esc_html( $school ); ?></div>
+							<?php if ( $thesis ) : ?>
+								<p class="km-edu-card__thesis"><?php echo esc_html( $thesis ); ?></p>
+							<?php endif; ?>
+							<div class="km-edu-card__tags">
+								<?php foreach ( $tags as $tag ) : ?>
+									<span class="km-tag km-tag--outline"><?php echo esc_html( $tag ); ?></span>
+								<?php endforeach; ?>
+							</div>
+						</article>
+					<?php endwhile; ?>
+				</div>
+				<?php wp_reset_postdata(); ?>
+			<?php else : ?>
+				<p><?php esc_html_e( 'No education entries yet.', 'kofimokome' ); ?></p>
+			<?php endif; ?>
+		</div>
+	</section>
 </main>
 
 <?php

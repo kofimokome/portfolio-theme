@@ -11,31 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$talks = array(
+$talks_query = new WP_Query(
 	array(
-		'event'   => 'WordCamp Johannesburg',
-		'loc'     => 'South Africa',
-		'date'    => 'October 2026',
-		'topic'   => 'Backend engineering, AI integration, and scalable WordPress products.',
-	),
-	array(
-		'event'   => 'WordCamp Nairobi',
-		'loc'     => 'Kenya',
-		'date'    => 'November 2024',
-		'topic'   => 'How AI is transforming WordPress development and responsible adoption of AI-assisted tools.',
-	),
-	array(
-		'event'   => 'WordCamp Jinja',
-		'loc'     => 'Uganda',
-		'date'    => 'September 2024',
-		'topic'   => 'Open-source contributions and community building for African developers.',
-	),
-	array(
-		'event'   => 'Buea WordPress Meetup',
-		'loc'     => 'Buea, Cameroon',
-		'date'    => 'Ongoing since June 2023',
-		'topic'   => 'Regular talks and workshops on WordPress, web development, and digital skills.',
-	),
+		'post_type'      => 'speaking',
+		'posts_per_page' => -1,
+		'orderby'        => 'menu_order',
+		'order'          => 'DESC',
+	)
 );
 ?>
 
@@ -75,18 +57,28 @@ $talks = array(
 	<section class="km-page-section">
 		<div class="km-container">
 			<div class="km-page-grid">
-				<?php foreach ( $talks as $talk ) : ?>
-					<article class="km-talk-card km-reveal">
-						<div class="km-talk-card__media">
-							<img src="<?php echo esc_url( KOFIMOKOME_URI . '/assets/img/placeholder.svg' ); ?>" alt="<?php echo esc_attr( $talk['event'] ); ?> photo placeholder">
-						</div>
-						<div class="km-talk-card__body">
-							<h2 class="km-talk-card__title"><?php echo esc_html( $talk['event'] ); ?></h2>
-							<div class="km-talk-card__meta"><?php echo esc_html( $talk['loc'] ); ?> · <?php echo esc_html( $talk['date'] ); ?></div>
-							<p class="km-talk-card__desc"><?php echo esc_html( $talk['topic'] ); ?></p>
-						</div>
-					</article>
-				<?php endforeach; ?>
+				<?php
+				if ( $talks_query->have_posts() ) :
+					while ( $talks_query->have_posts() ) :
+						$talks_query->the_post();
+						$location = kofimokome_get_speaking_location();
+						$date     = kofimokome_get_speaking_date();
+						?>
+						<article class="km-talk-card km-reveal">
+							<div class="km-talk-card__media">
+								<img src="<?php echo esc_url( KOFIMOKOME_URI . '/assets/img/placeholder.svg' ); ?>" alt="<?php the_title_attribute(); ?> photo placeholder">
+							</div>
+							<div class="km-talk-card__body">
+								<h2 class="km-talk-card__title"><?php the_title(); ?></h2>
+								<div class="km-talk-card__meta"><?php echo esc_html( $location ); ?> · <?php echo esc_html( $date ); ?></div>
+								<p class="km-talk-card__desc"><?php echo esc_html( wp_trim_words( get_the_content(), 40 ) ); ?></p>
+							</div>
+						</article>
+					<?php endwhile; ?>
+				<?php else : ?>
+					<p><?php esc_html_e( 'No talks yet.', 'kofimokome' ); ?></p>
+				<?php endif; ?>
+				<?php wp_reset_postdata(); ?>
 			</div>
 		</div>
 	</section>

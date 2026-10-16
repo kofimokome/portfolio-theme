@@ -16,7 +16,7 @@ $featured_projects = new WP_Query(
 		'post_type'      => 'project',
 		'posts_per_page' => 4,
 		'orderby'        => 'menu_order',
-		'order'          => 'ASC',
+		'order'          => 'DESC',
 		'meta_query'     => array(
 			array(
 				'key'     => '_km_project_featured',
@@ -27,36 +27,16 @@ $featured_projects = new WP_Query(
 	)
 );
 
-$community = array(
+$community_items = new WP_Query(
 	array(
-		'title' => 'WordPress Plugin Check',
-		'meta'  => 'Core contributor',
-		'desc'  => 'Contribute code, reviews and testing to the official Plugin Check plugin — the tool WordPress uses to help plugin developers follow best practices.',
-		'icon'  => 'fa-clipboard-check',
-		'link'  => 'https://github.com/wordpress/plugin-check',
-	),
-	array(
-		'title' => 'GatherPress',
-		'meta'  => 'Community contributor',
-		'desc'  => 'Help build GatherPress, the open-source event-management plugin that powers modern WordPress meetups and conferences.',
-		'icon'  => 'fa-calendar-alt',
-		'link'  => 'https://github.com/GatherPress/gatherpress',
-	),
-	array(
-		'title' => 'WP Credits Mentor',
-		'meta'  => 'Mentor',
-		'desc'  => 'Mentor new and returning WordPress contributors through the WP Credits program, helping them land their first core and plugin contributions.',
-		'icon'  => 'fa-hands-helping',
-		'link'  => 'https://make.wordpress.org/',
-	),
-	array(
-		'title' => 'Buea WordPress Meetup',
-		'meta'  => 'Co-organizer',
-		'desc'  => 'Organize technical meetups, train young developers and build networking opportunities in the local WordPress community.',
-		'icon'  => 'fa-users',
-		'link'  => 'https://www.meetup.com/buea-wordpress-meetup/',
-	),
+		'post_type'      => 'community',
+		'posts_per_page' => -1,
+		'orderby'        => 'menu_order',
+		'order'          => 'DESC',
+	)
 );
+
+$community_count = wp_count_posts( 'community' )->publish;
 ?>
 
 <main class="km-content km-page">
@@ -81,7 +61,7 @@ $community = array(
 					<div class="km-stat__label">Projects</div>
 				</div>
 				<div class="km-stat">
-					<div class="km-stat__value">4</div>
+					<div class="km-stat__value"><?php echo esc_html( $community_count ); ?></div>
 					<div class="km-stat__label">Communities</div>
 				</div>
 				<div class="km-stat">
@@ -154,23 +134,34 @@ $community = array(
 				<h2 class="km-page-section__title">Giving back to the ecosystem</h2>
 			</div>
 			<div class="km-bento">
-				<?php foreach ( $community as $item ) : ?>
-					<article class="km-bento__card km-reveal">
-						<div class="km-bento__icon">
-							<i class="fas <?php echo esc_attr( $item['icon'] ); ?>"></i>
-						</div>
-						<h3 class="km-bento__title"><?php echo esc_html( $item['title'] ); ?></h3>
-						<p class="km-bento__meta"><?php echo esc_html( $item['meta'] ); ?></p>
-						<p class="km-bento__text"><?php echo esc_html( $item['desc'] ); ?></p>
-						<?php if ( ! empty( $item['link'] ) ) : ?>
-							<p style="margin-top: 1rem; margin-bottom: 0;">
-								<a href="<?php echo esc_url( $item['link'] ); ?>" class="km-link-arrow" target="_blank" rel="noopener">
-									View on GitHub <span aria-hidden="true">→</span>
-								</a>
-							</p>
-						<?php endif; ?>
-					</article>
-				<?php endforeach; ?>
+				<?php
+				if ( $community_items->have_posts() ) :
+					while ( $community_items->have_posts() ) :
+						$community_items->the_post();
+						$icon = kofimokome_get_community_icon();
+						$role = kofimokome_get_community_role();
+						$link = kofimokome_get_community_link();
+						?>
+						<article class="km-bento__card km-reveal">
+							<div class="km-bento__icon">
+								<i class="fas <?php echo esc_attr( $icon ); ?>"></i>
+							</div>
+							<h3 class="km-bento__title"><?php the_title(); ?></h3>
+							<?php if ( $role ) : ?>
+								<p class="km-bento__meta"><?php echo esc_html( $role ); ?></p>
+							<?php endif; ?>
+							<p class="km-bento__text"><?php echo esc_html( wp_trim_words( get_the_content(), 28 ) ); ?></p>
+							<?php if ( $link ) : ?>
+								<p style="margin-top: 1rem; margin-bottom: 0;">
+									<a href="<?php echo esc_url( $link ); ?>" class="km-link-arrow" target="_blank" rel="noopener">
+										Learn more <span aria-hidden="true">→</span>
+									</a>
+								</p>
+							<?php endif; ?>
+						</article>
+					<?php endwhile; ?>
+				<?php endif; ?>
+				<?php wp_reset_postdata(); ?>
 			</div>
 		</div>
 	</section>

@@ -38,170 +38,12 @@ $skills = array(
 	'Teaching & Mentoring',
 );
 
-$experience = array(
-	array(
-		'role'     => 'Backend Developer',
-		'company'  => 'Errandia',
-		'location' => 'Buea, Cameroon',
-		'dates'    => 'Apr 2025 – Present',
-		'tags'     => array( 'Laravel', 'Docker', 'CI/CD', 'AI' ),
-		'items'    => array(
-			'Developed and maintained RESTful APIs using Laravel/PHP and MySQL, plus JavaScript-based interfaces and mobile applications.',
-			'Automated CI/CD deployment using Docker and GitHub Actions, cutting deployment time by more than 50%.',
-			'Introduced automated testing to improve code quality and reduce production bugs.',
-			'Led the development and release of two SaaS products within six months.',
-			'Incorporated AI-powered functionality to automate basic customer-support requests.',
-		),
-	),
-	array(
-		'role'     => 'Backend Developer (Part Time)',
-		'company'  => 'WhileSmart Ltd.',
-		'location' => 'Buea, Cameroon',
-		'dates'    => 'Nov 2024 – Present',
-		'tags'     => array( 'Laravel', 'Open Source', 'AI', 'Mentoring' ),
-		'items'    => array(
-			'Co-developed SourceAnt, an AI-assisted code-review solution.',
-			'Develop and maintain Laravel packages and robust APIs for open-source and proprietary projects.',
-			'Supervise and mentor interns in software development and open-source engineering.',
-			'Translate business requirements into Software Requirements Specifications and technical solutions.',
-		),
-	),
-	array(
-		'role'     => 'University Teaching Assistant',
-		'company'  => 'University of Buea',
-		'location' => 'Buea, Cameroon',
-		'dates'    => 'Dec 2022 – Sep 2026',
-		'tags'     => array( 'Teaching', 'Laravel', 'MySQL' ),
-		'items'    => array(
-			'Instruct level 200 students in Web Design, covering frontend and backend concepts.',
-			'Led the development of UB Logbook, a digital application for tracking lecturer attendance.',
-			'Generated academic timetables and supported administrative operations for the HND program.',
-			'Contributed to the development of the new national HND syllabus.',
-		),
-	),
-	array(
-		'role'     => 'Web Developer',
-		'company'  => 'Zinger Systems Ltd',
-		'location' => 'Buea, Cameroon',
-		'dates'    => 'Nov 2021 – Nov 2025',
-		'tags'     => array( 'PHP', 'JavaScript', 'Docker', 'WordPress' ),
-		'items'    => array(
-			'Led development of the Zangi mobile application, reducing delivery timeline from ~6 months to 3 months.',
-			'Collaborated with UI/UX designers to translate complex Figma designs into responsive websites.',
-			'Built dynamic web applications utilizing PHP, JavaScript, and Docker.',
-			'Architected custom WordPress solutions, including bespoke themes and plugins.',
-		),
-	),
-);
-
-$education = array(
-	array(
-		'degree' => 'Master of Technology in Computer Engineering',
-		'abbr'   => 'MTech',
-		'school' => 'University of Buea',
-		'thesis' => 'AI Based System to Detect Drowsy Drivers',
-		'dates'  => '2020 – 2023',
-		'tags'   => array( 'AI', 'Computer Vision', 'Research' ),
-	),
-	array(
-		'degree' => 'Bachelor of Technology in Computer Engineering',
-		'abbr'   => 'BTech',
-		'school' => 'University of Buea',
-		'dates'  => '2018 – 2020',
-		'tags'   => array( 'Software Engineering', 'Hardware' ),
-	),
-	array(
-		'degree' => 'Higher National Diploma',
-		'abbr'   => 'HND',
-		'school' => 'University of Buea',
-		'dates'  => '2015 – 2018',
-		'tags'   => array( 'Networking', 'System Maintenance' ),
-	),
-);
-
-$volunteering = array(
-	array(
-		'title'    => 'Buea WordPress Meetup Co-organizer',
-		'location' => 'Buea',
-		'dates'    => 'Jun 2023 – Present',
-		'desc'     => 'Organize technical meetups, trained 10+ young people in website development, and built networking opportunities.',
-		'icon'     => 'users',
-	),
-	array(
-		'title'    => 'Foundation for a Human Internet',
-		'location' => 'United States (remote)',
-		'dates'    => 'Jan 2022 – Present',
-		'desc'     => 'Manage AWS cloud infrastructure, DNS, SSL, CI/CD, led the humanID WordPress plugin and Discord bot development, and provide production support.',
-		'icon'     => 'globe',
-	),
-	array(
-		'title'    => 'WP Credits Mentor',
-		'location' => 'Global (remote)',
-		'dates'    => '2025 – Present',
-		'desc'     => 'Mentor new and returning WordPress contributors through the WP Credits program, helping them land their first core and plugin contributions.',
-		'icon'     => 'mentor',
-	),
-	array(
-		'title'    => 'WordPress Plugin Check Contributor',
-		'location' => 'Global (remote)',
-		'dates'    => '2024 – Present',
-		'desc'     => 'Contribute code, reviews and testing to the official Plugin Check plugin — the tool WordPress uses to help plugin developers follow best practices.',
-		'icon'     => 'check',
-	),
-	array(
-		'title'    => 'GatherPress Contributor',
-		'location' => 'Global (remote)',
-		'dates'    => '2024 – Present',
-		'desc'     => 'Help build GatherPress, the open-source event-management plugin that powers modern WordPress meetups and conferences.',
-		'icon'     => 'calendar',
-	),
-);
-
-$honors = array(
-	array(
-		'title' => 'Yoast Diversity Fund',
-		'org'   => 'Yoast',
-		'year'  => '2026',
-	),
-	array(
-		'title' => 'Yoast Care Fund',
-		'org'   => 'Yoast',
-		'year'  => '2025',
-	),
-	array(
-		'title' => 'Yoast Diversity Fund',
-		'org'   => 'Yoast',
-		'year'  => '2024',
-	),
-);
-
-$talks = array(
-	array(
-		'title'    => 'WordCamp Johannesburg',
-		'event'    => 'Speaker',
-		'location' => 'South Africa',
-		'year'     => '2026',
-	),
-	array(
-		'title'    => 'WordCamp Nairobi',
-		'event'    => 'Speaker',
-		'location' => 'Kenya',
-		'year'     => '2024',
-	),
-	array(
-		'title'    => 'WordCamp Jinja',
-		'event'    => 'Speaker',
-		'location' => 'Uganda',
-		'year'     => '2024',
-	),
-);
-
 $featured_projects = new WP_Query(
 	array(
 		'post_type'      => 'project',
 		'posts_per_page' => 6,
 		'orderby'        => 'menu_order',
-		'order'          => 'ASC',
+		'order'          => 'DESC',
 		'meta_query'     => array(
 			array(
 				'key'     => '_km_project_featured',
@@ -218,7 +60,142 @@ if ( ! $featured_projects->have_posts() ) {
 			'post_type'      => 'project',
 			'posts_per_page' => 6,
 			'orderby'        => 'menu_order',
-			'order'          => 'ASC',
+			'order'          => 'DESC',
+		)
+	);
+}
+
+$featured_experiences = new WP_Query(
+	array(
+		'post_type'      => 'experience',
+		'posts_per_page' => 3,
+		'orderby'        => 'menu_order',
+		'order'          => 'DESC',
+		'meta_query'     => array(
+			array(
+				'key'     => '_km_experience_featured',
+				'value'   => '1',
+				'compare' => '=',
+			),
+		),
+	)
+);
+
+if ( ! $featured_experiences->have_posts() ) {
+	$featured_experiences = new WP_Query(
+		array(
+			'post_type'      => 'experience',
+			'posts_per_page' => 3,
+			'orderby'        => 'menu_order',
+			'order'          => 'DESC',
+		)
+	);
+}
+
+$featured_community = new WP_Query(
+	array(
+		'post_type'      => 'community',
+		'posts_per_page' => 6,
+		'orderby'        => 'menu_order',
+		'order'          => 'DESC',
+		'meta_query'     => array(
+			array(
+				'key'     => '_km_community_featured',
+				'value'   => '1',
+				'compare' => '=',
+			),
+		),
+	)
+);
+
+if ( ! $featured_community->have_posts() ) {
+	$featured_community = new WP_Query(
+		array(
+			'post_type'      => 'community',
+			'posts_per_page' => 6,
+			'orderby'        => 'menu_order',
+			'order'          => 'DESC',
+		)
+	);
+}
+
+$featured_education = new WP_Query(
+	array(
+		'post_type'      => 'education',
+		'posts_per_page' => 6,
+		'orderby'        => 'menu_order',
+		'order'          => 'DESC',
+		'meta_query'     => array(
+			array(
+				'key'     => '_km_education_featured',
+				'value'   => '1',
+				'compare' => '=',
+			),
+		),
+	)
+);
+
+if ( ! $featured_education->have_posts() ) {
+	$featured_education = new WP_Query(
+		array(
+			'post_type'      => 'education',
+			'posts_per_page' => 6,
+			'orderby'        => 'menu_order',
+			'order'          => 'DESC',
+		)
+	);
+}
+
+$featured_awards = new WP_Query(
+	array(
+		'post_type'      => 'award',
+		'posts_per_page' => 6,
+		'orderby'        => 'menu_order',
+		'order'          => 'DESC',
+		'meta_query'     => array(
+			array(
+				'key'     => '_km_award_featured',
+				'value'   => '1',
+				'compare' => '=',
+			),
+		),
+	)
+);
+
+if ( ! $featured_awards->have_posts() ) {
+	$featured_awards = new WP_Query(
+		array(
+			'post_type'      => 'award',
+			'posts_per_page' => 6,
+			'orderby'        => 'menu_order',
+			'order'          => 'DESC',
+		)
+	);
+}
+
+$featured_speaking = new WP_Query(
+	array(
+		'post_type'      => 'speaking',
+		'posts_per_page' => 6,
+		'orderby'        => 'menu_order',
+		'order'          => 'DESC',
+		'meta_query'     => array(
+			array(
+				'key'     => '_km_speaking_featured',
+				'value'   => '1',
+				'compare' => '=',
+			),
+		),
+	)
+);
+
+if ( ! $featured_speaking->have_posts() ) {
+	$featured_speaking = new WP_Query(
+		array(
+			'post_type'      => 'speaking',
+			'posts_per_page' => 6,
+			'orderby'        => 'menu_order',
+			'order'          => 'DESC',
 		)
 	);
 }
@@ -264,31 +241,44 @@ if ( ! $featured_projects->have_posts() ) {
 		</div>
 	</div>
 
+	<?php
+	$hero_badges = new WP_Query(
+		array(
+			'post_type'      => 'hero_badge',
+			'posts_per_page' => 6,
+			'orderby'        => 'menu_order',
+			'order'          => 'DESC',
+		)
+	);
+	$badge_positions = array(
+		array( 'top:12%; left:6%;', '0s' ),
+		array( 'bottom:18%; left:8%;', '-2s' ),
+		array( 'top:55%; left:4%;', '-5s' ),
+		array( 'top:10%; right:6%;', '-1s' ),
+		array( 'top:45%; right:4%;', '-3s' ),
+		array( 'bottom:12%; right:8%;', '-4s' ),
+	);
+	?>
 	<div class="km-hero__floating" aria-hidden="true">
-		<span class="km-float-badge km-float-badge--random" style="top:12%; left:6%; animation-delay:0s;">
-			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-			Laravel
-		</span>
-		<span class="km-float-badge km-float-badge--random" style="bottom:18%; left:8%; animation-delay:-2s;">
-			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
-			Docker
-		</span>
-		<span class="km-float-badge km-float-badge--random" style="top:55%; left:4%; animation-delay:-5s;">
-			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
-			MySQL
-		</span>
-		<span class="km-float-badge km-float-badge--random" style="top:10%; right:6%; animation-delay:-1s;">
-			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
-			AI Integration
-		</span>
-		<span class="km-float-badge km-float-badge--random" style="top:45%; right:4%; animation-delay:-3s;">
-			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-			WordPress
-		</span>
-		<span class="km-float-badge km-float-badge--random" style="bottom:12%; right:8%; animation-delay:-4s;">
-			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
-			AWS
-		</span>
+		<?php
+		$i = 0;
+		if ( $hero_badges->have_posts() ) :
+			while ( $hero_badges->have_posts() ) :
+				$hero_badges->the_post();
+				$icon     = kofimokome_get_hero_badge_icon();
+				$position = isset( $badge_positions[ $i ] ) ? $badge_positions[ $i ][0] : 'top:50%; left:50%;';
+				$delay    = isset( $badge_positions[ $i ] ) ? $badge_positions[ $i ][1] : '0s';
+				?>
+				<span class="km-float-badge km-float-badge--random" style="<?php echo esc_attr( $position ); ?> animation-delay:<?php echo esc_attr( $delay ); ?>">
+					<i class="<?php echo esc_attr( $icon ); ?>" aria-hidden="true"></i>
+					<?php the_title(); ?>
+				</span>
+			<?php
+				$i++;
+			endwhile;
+			wp_reset_postdata();
+		endif;
+		?>
 	</div>
 </section>
 
@@ -317,35 +307,46 @@ if ( ! $featured_projects->have_posts() ) {
 		</div>
 
 		<div class="km-work-list">
-			<?php foreach ( $experience as $job ) : ?>
-				<article class="km-work-row km-reveal">
-					<div class="km-work-row__main">
-						<h3 class="km-work-row__title"><?php echo esc_html( $job['role'] ); ?></h3>
-						<div class="km-work-row__meta">
-							<strong><?php echo esc_html( $job['company'] ); ?></strong>
-							<span><?php echo esc_html( $job['location'] ); ?></span>
-							<span class="km-work-row__dates"><?php echo esc_html( $job['dates'] ); ?></span>
+			<?php
+			if ( $featured_experiences->have_posts() ) :
+				while ( $featured_experiences->have_posts() ) :
+					$featured_experiences->the_post();
+					$company  = kofimokome_get_experience_company();
+					$location = kofimokome_get_experience_location();
+					$dates    = kofimokome_get_experience_dates();
+					$items    = kofimokome_get_experience_items();
+					$tags     = kofimokome_get_experience_tags();
+					?>
+					<article class="km-work-row km-reveal">
+						<div class="km-work-row__main">
+							<h3 class="km-work-row__title"><?php the_title(); ?></h3>
+							<div class="km-work-row__meta">
+								<strong><?php echo esc_html( $company ); ?></strong>
+								<span><?php echo esc_html( $location ); ?></span>
+								<span class="km-work-row__dates"><?php echo esc_html( $dates ); ?></span>
+							</div>
 						</div>
-					</div>
-					<div class="km-work-row__body">
-						<ul class="km-work-row__items">
-							<?php foreach ( $job['items'] as $item ) : ?>
-								<li><?php echo esc_html( $item ); ?></li>
-							<?php endforeach; ?>
-						</ul>
-					</div>
-					<div class="km-work-row__aside">
-						<div class="km-work-row__tags">
-							<?php foreach ( $job['tags'] as $tag ) : ?>
-								<span class="km-tag"><?php echo esc_html( $tag ); ?></span>
-							<?php endforeach; ?>
+						<div class="km-work-row__body">
+							<ul class="km-work-row__items">
+								<?php foreach ( array_slice( $items, 0, 5 ) as $item ) : ?>
+									<li><?php echo esc_html( $item ); ?></li>
+								<?php endforeach; ?>
+							</ul>
 						</div>
-						<a href="<?php echo esc_url( home_url( '/experience/' ) ); ?>" class="km-arrow" aria-label="View experience details">
-							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-						</a>
-					</div>
-				</article>
-			<?php endforeach; ?>
+						<div class="km-work-row__aside">
+							<div class="km-work-row__tags">
+								<?php foreach ( $tags as $tag ) : ?>
+									<span class="km-tag"><?php echo esc_html( $tag ); ?></span>
+								<?php endforeach; ?>
+							</div>
+							<a href="<?php echo esc_url( home_url( '/experience/' ) ); ?>" class="km-arrow" aria-label="View experience details">
+								<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+							</a>
+						</div>
+					</article>
+				<?php endwhile; ?>
+			<?php endif; ?>
+			<?php wp_reset_postdata(); ?>
 		</div>
 
 		<div class="km-reveal" style="margin-top: 3rem;">
@@ -362,24 +363,39 @@ if ( ! $featured_projects->have_posts() ) {
 		</div>
 
 		<div class="km-edu-grid">
-			<?php foreach ( $education as $edu ) : ?>
-				<article class="km-edu-card km-reveal">
-					<div class="km-edu-card__top">
-						<span class="km-edu-card__label"><?php echo esc_html( $edu['degree'] ); ?></span>
-						<span class="km-edu-card__dates"><?php echo esc_html( $edu['dates'] ); ?></span>
-					</div>
-					<div class="km-edu-card__abbr"><?php echo esc_html( $edu['abbr'] ); ?></div>
-					<div class="km-edu-card__school"><?php echo esc_html( $edu['school'] ); ?></div>
-					<?php if ( ! empty( $edu['thesis'] ) ) : ?>
-						<p class="km-edu-card__thesis"><?php echo esc_html( $edu['thesis'] ); ?></p>
-					<?php endif; ?>
-					<div class="km-edu-card__tags">
-						<?php foreach ( $edu['tags'] as $tag ) : ?>
-							<span class="km-tag km-tag--outline"><?php echo esc_html( $tag ); ?></span>
-						<?php endforeach; ?>
-					</div>
-				</article>
-			<?php endforeach; ?>
+			<?php
+			if ( $featured_education->have_posts() ) :
+				while ( $featured_education->have_posts() ) :
+					$featured_education->the_post();
+					$abbr   = kofimokome_get_education_abbr();
+					$school = kofimokome_get_education_school();
+					$dates  = kofimokome_get_education_dates();
+					$thesis = kofimokome_get_education_thesis();
+					$tags   = kofimokome_get_education_tags();
+					?>
+					<article class="km-edu-card km-reveal">
+						<div class="km-edu-card__top">
+							<span class="km-edu-card__label"><?php the_title(); ?></span>
+							<span class="km-edu-card__dates"><?php echo esc_html( $dates ); ?></span>
+						</div>
+						<div class="km-edu-card__abbr"><?php echo esc_html( $abbr ); ?></div>
+						<div class="km-edu-card__school"><?php echo esc_html( $school ); ?></div>
+						<?php if ( $thesis ) : ?>
+							<p class="km-edu-card__thesis"><?php echo esc_html( $thesis ); ?></p>
+						<?php endif; ?>
+						<div class="km-edu-card__tags">
+							<?php foreach ( $tags as $tag ) : ?>
+								<span class="km-tag km-tag--outline"><?php echo esc_html( $tag ); ?></span>
+							<?php endforeach; ?>
+						</div>
+					</article>
+				<?php endwhile; ?>
+			<?php endif; ?>
+			<?php wp_reset_postdata(); ?>
+		</div>
+
+		<div class="km-reveal" style="margin-top: 3rem;">
+			<a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" class="km-link-arrow">View full academic background <span aria-hidden="true">→</span></a>
 		</div>
 	</div>
 </section>
@@ -392,26 +408,31 @@ if ( ! $featured_projects->have_posts() ) {
 		</div>
 
 		<div class="km-bento">
-			<?php foreach ( $volunteering as $vol ) : ?>
-				<article class="km-bento__card km-reveal">
-					<div class="km-bento__icon">
-						<?php if ( 'users' === $vol['icon'] ) : ?>
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-						<?php elseif ( 'mentor' === $vol['icon'] ) : ?>
-							<i class="fas fa-hands-helping" aria-hidden="true"></i>
-						<?php elseif ( 'check' === $vol['icon'] ) : ?>
-							<i class="fas fa-clipboard-check" aria-hidden="true"></i>
-						<?php elseif ( 'calendar' === $vol['icon'] ) : ?>
-							<i class="fas fa-calendar-alt" aria-hidden="true"></i>
-						<?php else : ?>
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-						<?php endif; ?>
-					</div>
-					<h3 class="km-bento__title"><?php echo esc_html( $vol['title'] ); ?></h3>
-					<p class="km-bento__meta"><?php echo esc_html( $vol['location'] ); ?> · <?php echo esc_html( $vol['dates'] ); ?></p>
-					<p class="km-bento__text"><?php echo esc_html( $vol['desc'] ); ?></p>
-				</article>
-			<?php endforeach; ?>
+			<?php
+			if ( $featured_community->have_posts() ) :
+				while ( $featured_community->have_posts() ) :
+					$featured_community->the_post();
+					$icon     = kofimokome_get_community_icon();
+					$location = kofimokome_get_community_location();
+					$dates    = kofimokome_get_community_dates();
+					$role     = kofimokome_get_community_role();
+					$meta     = array_filter( array( $role, $location, $dates ) );
+					?>
+					<article class="km-bento__card km-reveal">
+						<div class="km-bento__icon">
+							<i class="fas <?php echo esc_attr( $icon ); ?>" aria-hidden="true"></i>
+						</div>
+						<h3 class="km-bento__title"><?php the_title(); ?></h3>
+						<p class="km-bento__meta"><?php echo esc_html( implode( ' · ', $meta ) ); ?></p>
+						<p class="km-bento__text"><?php echo esc_html( wp_trim_words( get_the_content(), 22 ) ); ?></p>
+					</article>
+				<?php endwhile; ?>
+			<?php endif; ?>
+			<?php wp_reset_postdata(); ?>
+		</div>
+
+		<div class="km-reveal" style="margin-top: 3rem;">
+			<a href="<?php echo esc_url( home_url( '/open-source/' ) ); ?>" class="km-link-arrow">View all community work <span aria-hidden="true">→</span></a>
 		</div>
 	</div>
 </section>
@@ -426,16 +447,24 @@ if ( ! $featured_projects->have_posts() ) {
 		<div class="km-section__row km-reveal">
 			<h3 class="km-section__subTitle">Honours & Awards</h3>
 			<div class="km-scroll">
-				<?php foreach ( $honors as $honor ) : ?>
-					<article class="km-recognition-card">
-						<div class="km-recognition-card__year"><?php echo esc_html( $honor['year'] ); ?></div>
-						<div class="km-recognition-card__body">
-							<h4><?php echo esc_html( $honor['title'] ); ?></h4>
-							<p><?php echo esc_html( $honor['org'] ); ?></p>
-						</div>
-						<div class="km-recognition-card__icon">🏆</div>
-					</article>
-				<?php endforeach; ?>
+				<?php
+				if ( $featured_awards->have_posts() ) :
+					while ( $featured_awards->have_posts() ) :
+						$featured_awards->the_post();
+						$year = kofimokome_get_award_year();
+						$org  = kofimokome_get_award_organization();
+						?>
+						<article class="km-recognition-card">
+							<div class="km-recognition-card__year"><?php echo esc_html( $year ); ?></div>
+							<div class="km-recognition-card__body">
+								<h4><?php the_title(); ?></h4>
+								<p><?php echo esc_html( $org ); ?></p>
+							</div>
+							<div class="km-recognition-card__icon">🏆</div>
+						</article>
+					<?php endwhile; ?>
+				<?php endif; ?>
+				<?php wp_reset_postdata(); ?>
 			</div>
 			<p style="margin-top:1rem;">
 				<a href="<?php echo esc_url( home_url( '/awards/' ) ); ?>" class="km-link-arrow">All awards <span aria-hidden="true">→</span></a>
@@ -445,16 +474,24 @@ if ( ! $featured_projects->have_posts() ) {
 		<div class="km-section__row km-reveal">
 			<h3 class="km-section__subTitle">Speaking</h3>
 			<div class="km-scroll">
-				<?php foreach ( $talks as $talk ) : ?>
-					<article class="km-recognition-card">
-						<div class="km-recognition-card__year"><?php echo esc_html( $talk['year'] ); ?></div>
-						<div class="km-recognition-card__body">
-							<h4><?php echo esc_html( $talk['title'] ); ?></h4>
-							<p><?php echo esc_html( $talk['event'] ); ?> · <?php echo esc_html( $talk['location'] ); ?></p>
-						</div>
-						<div class="km-recognition-card__icon">🎤</div>
-					</article>
-				<?php endforeach; ?>
+				<?php
+				if ( $featured_speaking->have_posts() ) :
+					while ( $featured_speaking->have_posts() ) :
+						$featured_speaking->the_post();
+						$year     = kofimokome_get_speaking_year();
+						$location = kofimokome_get_speaking_location();
+						?>
+						<article class="km-recognition-card">
+							<div class="km-recognition-card__year"><?php echo esc_html( $year ); ?></div>
+							<div class="km-recognition-card__body">
+								<h4><?php the_title(); ?></h4>
+								<p><?php echo esc_html( $location ); ?></p>
+							</div>
+							<div class="km-recognition-card__icon">🎤</div>
+						</article>
+					<?php endwhile; ?>
+				<?php endif; ?>
+				<?php wp_reset_postdata(); ?>
 			</div>
 			<p style="margin-top:1rem;">
 				<a href="<?php echo esc_url( home_url( '/speaking/' ) ); ?>" class="km-link-arrow">All speaking engagements <span aria-hidden="true">→</span></a>
@@ -555,17 +592,20 @@ if ( ! $featured_projects->have_posts() ) {
 					<a href="tel:<?php echo esc_attr( $phone_number ); ?>" class="km-link-arrow">+237 670 224 092</a>
 					<a href="<?php echo esc_url( $website_url ); ?>" target="_blank" rel="noopener noreferrer" class="km-link-arrow">kofimoko.me</a>
 				</div>
-			</div>
-			<div class="km-reveal">
-				<h3 class="km-section__subTitle">Online profiles</h3>
-				<div class="km-socials" style="gap:1rem; flex-wrap:wrap;">
-					<a href="<?php echo esc_url( $linkedin_url ); ?>" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-					<a href="<?php echo esc_url( $github_url ); ?>" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
-					<a href="<?php echo esc_url( $twitter_url ); ?>" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
-					<a href="<?php echo esc_url( $medium_url ); ?>" target="_blank" rel="noopener noreferrer" aria-label="Medium"><i class="fab fa-medium" aria-hidden="true"></i></a>
-					<a href="<?php echo esc_url( $wp_profile_url ); ?>" target="_blank" rel="noopener noreferrer" aria-label="WordPress.org profile"><i class="fab fa-wordpress" aria-hidden="true"></i></a>
-					<a href="<?php echo esc_url( $instagram_url ); ?>" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+				<div class="km-contact__socials" style="margin-top: 2rem;">
+					<h3 class="km-section__subTitle" style="margin-bottom: 1rem;">Online profiles</h3>
+					<div class="km-socials" style="gap:1rem; flex-wrap:wrap;">
+						<a href="<?php echo esc_url( $linkedin_url ); ?>" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+						<a href="<?php echo esc_url( $github_url ); ?>" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+						<a href="<?php echo esc_url( $twitter_url ); ?>" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
+						<a href="<?php echo esc_url( $medium_url ); ?>" target="_blank" rel="noopener noreferrer" aria-label="Medium"><i class="fab fa-medium" aria-hidden="true"></i></a>
+						<a href="<?php echo esc_url( $wp_profile_url ); ?>" target="_blank" rel="noopener noreferrer" aria-label="WordPress.org profile"><i class="fab fa-wordpress" aria-hidden="true"></i></a>
+						<a href="<?php echo esc_url( $instagram_url ); ?>" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+					</div>
 				</div>
+			</div>
+			<div class="km-reveal km-contact__form">
+				<?php echo do_shortcode( '[contact-form-7 id="109" title="Portfolio contact form"]' ); ?>
 			</div>
 		</div>
 	</div>
